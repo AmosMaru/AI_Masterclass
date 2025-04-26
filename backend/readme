@@ -1,0 +1,188 @@
+# Virtual Character with Function Calling
+
+A dynamic virtual character application with speech synthesis, lip-sync animation, and intelligent function-calling capabilities.
+
+## Features
+
+- Interactive virtual character with personality and emotions
+- Text-to-speech conversion using OpenAI's Whisper TTS API
+- Animated lip synchronization using Rhubarb
+- Memory and context-aware conversations
+- Function calling capabilities using LlamaIndex
+- Facial expressions and animations
+
+## Prerequisites
+
+Before installing, make sure you have the following software installed on your system:
+
+- Python 3.8 or higher
+- ffmpeg (required for audio conversion)
+- Rhubarb Lip Sync (required for lip-sync animation)
+
+## Installation
+
+1. Install the required Python packages:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+2. Install ffmpeg (if not already installed):
+   
+   **Ubuntu/Debian:**
+   ```bash
+   sudo apt update
+   sudo apt install ffmpeg
+   ```
+   
+   **macOS:**
+   ```bash
+   brew install ffmpeg
+   ```
+   
+   **Windows:**
+   Download from the [official website](https://ffmpeg.org/download.html) and add to PATH
+
+3. Install Rhubarb Lip Sync:
+   
+   Download from [GitHub](https://github.com/DanielSWolf/rhubarb-lip-sync/releases) and place the executable in the `rhubarb` directory.
+
+4. Create a `.env` file with your OpenAI API key:
+   ```
+   OPENAI_API_KEY=your_api_key_here
+   ```
+
+## Usage
+
+1. Start the server:
+   ```bash
+   python app.py
+   ```
+   Or using uvicorn directly:
+   ```bash
+   uvicorn app:app --reload --host 0.0.0.0 --port 3000
+   ```
+
+2. Access the API at http://localhost:3000
+
+3. Send chat messages to the `/chat` endpoint:
+   ```bash
+   curl -X POST http://localhost:3000/chat \
+     -H "Content-Type: application/json" \
+     -d '{"message": "Hello, how are you today?"}'
+   ```
+
+## API Endpoints
+
+- `GET /` - Health check endpoint
+- `GET /voices` - Get available voice options
+- `POST /chat` - Send a message to the virtual character
+
+## Function Calling Capabilities
+
+The application includes the following built-in functions that can be called during conversations:
+
+- `get_weather(location)` - Get weather information for a specified location
+- `get_time(timezone)` - Get the current time in a specified timezone
+- `remember_fact(fact)` - Remember a fact about the user
+
+You can extend the functionality by adding new functions to the `tools` list in the code.
+
+## Response Format
+
+The chat endpoint returns a JSON response with the following structure:
+
+```json
+{
+  "messages": [
+    {
+      "text": "Hello, how are you doing today?",
+      "audio": "base64-encoded-audio-data",
+      "lipsync": {
+        "mouthCues": [
+          {"start": 0.0, "end": 0.1, "value": "X"},
+          ...
+        ]
+      },
+      "facialExpression": "smile",
+      "animation": "Talking_1"
+    }
+  ]
+}
+```
+
+## Customization
+
+### Available Facial Expressions
+
+- `smile`
+- `sad`
+- `angry`
+- `surprised`
+- `funnyFace`
+- `default`
+
+### Available Animations
+
+- `Talking_0`, `Talking_1`, `Talking_2`
+- `Crying`
+- `Laughing`
+- `Rumba`
+- `Idle`
+- `Terrified`
+- `Angry`
+
+### Voice Options
+
+- `alloy`
+- `echo`
+- `fable`
+- `onyx`
+- `nova`
+- `shimmer`
+
+## Directory Structure
+
+```
+├─] .env (ignored)
+├── .gitignore
+├── app/
+│   ├── agent.py #
+│   ├── logger.py
+│   ├── routes.py
+│   ├── schema.py
+│   └── tools.py
+├─] env/ (ignored)
+├── logs/
+│   └── app.log
+├── main.py
+├── readme
+├── requiments.txt
+└── utils/
+    └── helper.py
+
+```
+
+## Troubleshooting
+
+### Missing ffmpeg
+
+If you encounter an error about ffmpeg not being found, make sure it's installed and available in your PATH.
+
+### Lip Sync Issues
+
+Make sure the path to Rhubarb is correct in the code. The default path is `rhubarb/rhubarb`.
+
+### API Key Issues
+
+Ensure your OpenAI API key is correctly set in the `.env` file.
+
+## License
+
+[MIT License](LICENSE)
+
+## Acknowledgements
+
+- [OpenAI](https://openai.com/) for their TTS and Chat Completion APIs
+- [Rhubarb Lip Sync](https://github.com/DanielSWolf/rhubarb-lip-sync) for the lip synchronization tool
+- [LlamaIndex](https://www.llamaindex.ai/) for the function calling framework
+- [FastAPI](https://fastapi.tiangolo.com/) for the web framework

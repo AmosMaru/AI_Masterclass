@@ -1,0 +1,34 @@
+{
+  "metadata": {
+    "soundFile": "/home/kilush/Desktop/work/3d/backend/audios/message_6.wav",
+    "duration": 4.34
+  },
+  "mouthCues": [
+    { "start": 0.00, "end": 0.03, "value": "X" },
+    { "start": 0.03, "end": 0.11, "value": "B" },
+    { "start": 0.11, "end": 0.19, "value": "A" },
+    { "start": 0.19, "end": 0.26, "value": "E" },
+    { "start": 0.26, "end": 0.46, "value": "B" },
+    { "start": 0.46, "end": 0.60, "value": "C" },
+    { "start": 0.60, "end": 0.67, "value": "B" },
+    { "start": 0.67, "end": 0.74, "value": "C" },
+    { "start": 0.74, "end": 0.83, "value": "A" },
+    { "start": 0.83, "end": 0.88, "value": "B" },
+    { "start": 0.88, "end": 1.00, "value": "C" },
+    { "start": 1.00, "end": 1.13, "value": "A" },
+    { "start": 1.13, "end": 1.50, "value": "B" },
+    { "start": 1.50, "end": 1.64, "value": "C" },
+    { "start": 1.64, "end": 1.72, "value": "A" },
+    { "start": 1.72, "end": 1.81, "value": "E" },
+    { "start": 1.81, "end": 1.95, "value": "F" },
+    { "start": 1.95, "end": 2.02, "value": "B" },
+    { "start": 2.02, "end": 2.11, "value": "A" },
+    { "start": 2.11, "end": 2.43, "value": "B" },
+    { "start": 2.43, "end": 2.69, "value": "X" },
+    { "start": 2.69, "end": 2.74, "value": "B" },
+    { "start": 2.74, "end": 2.78, "value": "C" },
+    { "start": 2.78, "end": 2.86, "value": "A" },
+    { "start": 2.86, "end": 3.49, "value": "B" },
+    { "start": 3.49, "end": 4.34, "value": "X" }
+  ]
+}

@@ -1,0 +1,25 @@
+# FastAPI and server dependencies
+fastapi>=0.103.1
+uvicorn>=0.23.2
+pydantic>=2.3.0
+python-dotenv>=1.0.0
+
+# CORS middleware
+starlette>=0.27.0
+
+# OpenAI API client
+openai>=1.2.0
+
+# LlamaIndex dependencies
+llama-index-core>=0.10.0
+llama-index-llms-openai>=0.1.0
+
+# Audio processing
+ffmpeg-python>=0.2.0
+
+# Async functionality
+asyncio>=3.4.3
+
+# Utilities
+python-multipart>=0.0.6
+typing-extensions>=4.7.1

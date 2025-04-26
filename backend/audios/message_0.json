@@ -1,0 +1,23 @@
+{
+  "metadata": {
+    "soundFile": "/home/kilush/Desktop/work/3d/backend/audios/message_0.wav",
+    "duration": 2.35
+  },
+  "mouthCues": [
+    { "start": 0.00, "end": 0.05, "value": "X" },
+    { "start": 0.05, "end": 0.10, "value": "B" },
+    { "start": 0.10, "end": 0.15, "value": "C" },
+    { "start": 0.15, "end": 0.22, "value": "H" },
+    { "start": 0.22, "end": 0.29, "value": "E" },
+    { "start": 0.29, "end": 0.57, "value": "C" },
+    { "start": 0.57, "end": 1.06, "value": "B" },
+    { "start": 1.06, "end": 1.20, "value": "D" },
+    { "start": 1.20, "end": 1.27, "value": "B" },
+    { "start": 1.27, "end": 1.35, "value": "A" },
+    { "start": 1.35, "end": 1.55, "value": "C" },
+    { "start": 1.55, "end": 1.90, "value": "B" },
+    { "start": 1.90, "end": 2.04, "value": "C" },
+    { "start": 2.04, "end": 2.18, "value": "B" },
+    { "start": 2.18, "end": 2.35, "value": "X" }
+  ]
+}
